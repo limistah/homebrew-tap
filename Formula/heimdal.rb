@@ -1,7 +1,7 @@
 class Heimdal < Formula
   desc "Universal dotfile and system configuration manager"
   homepage "https://github.com/limistah/heimdal"
-  version "2.1.0"
+  version "3.0.0"
   license "MIT"
 
   on_macos do
