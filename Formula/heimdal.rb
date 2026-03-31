@@ -1,17 +1,17 @@
 class Heimdal < Formula
   desc "Universal dotfile and system configuration manager"
   homepage "https://github.com/limistah/heimdal"
-  version "3.0.1"
+  version "3.0.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/limistah/heimdal/releases/download/v3.0.1/heimdal-darwin-arm64.tar.gz"
-      sha256 "f536a08f3b1f8bfc4782b11ead6f49998e4e3e5c3f34a0e15d5b2e626f67ddc2"
+      url "https://github.com/limistah/heimdal/releases/download/v3.0.2/heimdal-darwin-arm64.tar.gz"
+      sha256 "0790c29d14441f53bef05a136f0fe1e81c966509a476fddaedf0dd3cd6f5d73f"
     end
     on_intel do
-      url "https://github.com/limistah/heimdal/releases/download/v3.0.1/heimdal-darwin-amd64.tar.gz"
-      sha256 "d5ee21ed3862a2b3287f8feb6a04931746df590ad507ab5716ba8e922cb4e4f8"
+      url "https://github.com/limistah/heimdal/releases/download/v3.0.2/heimdal-darwin-amd64.tar.gz"
+      sha256 "ee54fd74fdf4f3d20a5520db1b1161546b540ff8c45dd111a71553a5b591ac62"
     end
   end
 
