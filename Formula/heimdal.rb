@@ -7,11 +7,11 @@ class Heimdal < Formula
   on_macos do
     on_arm do
       url "https://github.com/limistah/heimdal/releases/download/v3.1.0/heimdal-darwin-arm64.tar.gz"
-      sha256 "ab04c79440f62480aa753b33156b04c7268cc1d3d56e5aee227b925e44b56e65"
+      sha256 "54a3a835143f32459e39eb4a2ba4ed58204d3e0f042814fd10a563be931fdeb3"
     end
     on_intel do
       url "https://github.com/limistah/heimdal/releases/download/v3.1.0/heimdal-darwin-amd64.tar.gz"
-      sha256 "6499a83e625db3c7312f4f9fc84d7dd8a2fd763e79079697114c55d359616501"
+      sha256 "efd6d35d40fa73f15b443e370d86741b6e7b34053579a216b7e1e940e3bc56d4"
     end
   end
 
