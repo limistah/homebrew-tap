@@ -1,17 +1,16 @@
 class Heimdal < Formula
   desc "Universal dotfile and system configuration manager"
   homepage "https://github.com/limistah/heimdal"
-  version "3.0.2"
+  version "3.1.0"
   license "MIT"
 
   on_macos do
-    on_arm do
-      url "https://github.com/limistah/heimdal/releases/download/v3.0.2/heimdal-darwin-arm64.tar.gz"
-      sha256 "0790c29d14441f53bef05a136f0fe1e81c966509a476fddaedf0dd3cd6f5d73f"
-    end
-    on_intel do
-      url "https://github.com/limistah/heimdal/releases/download/v3.0.2/heimdal-darwin-amd64.tar.gz"
-      sha256 "ee54fd74fdf4f3d20a5520db1b1161546b540ff8c45dd111a71553a5b591ac62"
+    if Hardware::CPU.arm?
+      url "https://github.com/limistah/heimdal/releases/download/v3.1.0/heimdal-darwin-arm64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+    else
+      url "https://github.com/limistah/heimdal/releases/download/v3.1.0/heimdal-darwin-amd64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
 
@@ -20,6 +19,6 @@ class Heimdal < Formula
   end
 
   test do
-    assert_match "heimdal", shell_output("#{bin}/heimdal --version")
+    assert_match "heimdal 3.1.0", shell_output("#{bin}/heimdal --version")
   end
 end
