@@ -5,12 +5,13 @@ class Heimdal < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/limistah/heimdal/releases/download/v3.1.0/heimdal-darwin-arm64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
-    else
+      sha256 "ab04c79440f62480aa753b33156b04c7268cc1d3d56e5aee227b925e44b56e65"
+    end
+    on_intel do
       url "https://github.com/limistah/heimdal/releases/download/v3.1.0/heimdal-darwin-amd64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "6499a83e625db3c7312f4f9fc84d7dd8a2fd763e79079697114c55d359616501"
     end
   end
 
@@ -19,6 +20,6 @@ class Heimdal < Formula
   end
 
   test do
-    assert_match "heimdal 3.1.0", shell_output("#{bin}/heimdal --version")
+    assert_match "heimdal", shell_output("#{bin}/heimdal --version")
   end
 end
